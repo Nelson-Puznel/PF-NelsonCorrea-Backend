@@ -13,7 +13,8 @@
                 </div>
         </div>
         <div class="acceder">
-            <button type="button" class="btn btn-primary"(click)="login()">Acceder</button>
+            <button type="button" class="btn btn-primary"(click)="login()" *ngIf="!isLogged">Acceder</button>
+            <button type="button" class="btn btn-primary"(click)="onLogOut()" *ngIf="isLogged">Salir</button>
         </div>
     </div>
 </div>
