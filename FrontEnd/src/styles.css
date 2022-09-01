@@ -8,3 +8,14 @@
 body {
     overflow-x: hidden;
 }
+h1{
+    display: inline;
+    font-size: 20px;
+    /* color: #000000; */
+    font-style: italic;
+}
+h2{
+    display: inline;
+    font-size: x-small;
+    /* color: #868686 */
+}
