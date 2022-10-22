@@ -1,116 +1,38 @@
 <div class="row">
-    <h1>Hard and Soft Skills</h1>
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de HTML -->
+    <h1>Hard and Soft Skills   <button type="button" class="btn btn-primary" routerLink="/newskill"
+        *ngIf="isLogged"><i class="bi bi-plus-square"></i></button></h1>
+
+    <div class="col-sm-4 col-md-4 col-lg-2 circulo"  *ngFor="let skill of skill">
+        <!-- SKILL -->
         <circle-progress
-            [percent]="85"
+            [percent]="(skill.porcentaje)"
             [radius]="50"
-            [imageSrc]="'../assets/html.png'"
-            [showImage]="true"
+            [imageSrc]="''"
+            [title]="(skill.nombre)"
+            [showTitle]="true"
+            [showSubtitle]="false"
+            [showImage]="false"
+            [showUnits]="false"
             [imageHeight]="50"
             [imageWidth]="50"
-            [title]="'HTML'"
-            [titleFontSize]="'3em'"
+            [titleFontSize]="'1em'"
             [outerStrokeWidth]="8"
             [outerStrokeColor]="'#e44d24'"
             [innerStrokeColor]="'#ffffff'"
             [animation]="true"
             [animationDuration]="800"
         ></circle-progress>
+
+        <div>
+            <td *ngIf="isLogged">
+
+                <button *ngIf="isLogged" type="button" class="btn btn-outline-danger"
+                   (click)="delete(skill.id)"><i class="bi bi-trash3"></i></button>
+           
+               <button *ngIf="isLogged" type="button" class="btn btn-outline-primary"
+                   routerLink="/editskill/{{skill.id}}"><i class="bi bi-pencil-square"></i></button>
+                   </td>
+        </div>
     </div>
     
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de CSS -->
-      <circle-progress
-            [percent]="70"
-            [radius]="50"
-            [imageSrc]="'../assets/CSS.png'"
-            [showImage]="true"
-            [imageHeight]="50"
-            [imageWidth]="50"
-            [title]="'CSS'"
-            [titleFontSize]="'3em'"
-            [outerStrokeWidth]="8"
-            [outerStrokeColor]="'#2277ff'"
-            [innerStrokeColor]="'#ffffff'"
-            [animation]="true"
-            [animationDuration]="800"
-            ></circle-progress>
-    </div>
-
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de JAVA -->
-        <circle-progress
-            [percent]="75"
-            [radius]="50"
-            [imageSrc]="'../assets/js.png'"
-            [showImage]="true"
-            [imageHeight]="50"
-            [imageWidth]="50"
-            [title]="'JS'"
-            [titleFontSize]="'3em'"
-            [outerStrokeWidth]="8"
-            [outerStrokeColor]="'#ffd83a'"
-            [innerStrokeColor]="'#ffffff'"
-            [animation]="true"
-            [animationDuration]="800"
-        ></circle-progress>
-    </div>
-
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de GIT -->
-         <circle-progress
-        [percent]="90"
-        [radius]="50"
-        [imageSrc]="'../assets/git.png'"
-        [showImage]="true"
-        [imageHeight]="50"
-        [imageWidth]="50"
-        [title]="'GITHUB'"
-        [titleFontSize]="'3em'"
-        [outerStrokeWidth]="8"
-        [outerStrokeColor]="'#7f7f7f'"
-        [innerStrokeColor]="'#ffffff'"
-        [animation]="true"
-        [animationDuration]="800"
-        ></circle-progress>
-    </div>
-
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de INGLES -->
-         <circle-progress
-        [percent]="60"
-        [radius]="50"
-        [imageSrc]="'../assets/eng.png'"
-        [showImage]="true"
-        [imageHeight]="50"
-        [imageWidth]="50"
-        [title]="'Ingles'"
-        [titleFontSize]="'3em'"
-        [outerStrokeWidth]="8"
-        [outerStrokeColor]="'#7f7f7f'"
-        [innerStrokeColor]="'#ffffff'"
-        [animation]="true"
-        [animationDuration]="800"
-        ></circle-progress>
-    </div>
-
-    <div class="col-sm-4 col-md-4 col-lg-2">
-        <!-- Circulo de TRABAJO DE GRUPO -->
-         <circle-progress
-        [percent]="85"
-        [radius]="50"
-        [imageSrc]="'../assets/grupal.png'"
-        [showImage]="true"
-        [imageHeight]="50"
-        [imageWidth]="50"
-        [title]="'Trabajo en Equipo'"
-        [titleFontSize]="'3em'"
-        [outerStrokeWidth]="8"
-        [outerStrokeColor]="'#7f7f7f'"
-        [innerStrokeColor]="'#ffffff'"
-        [animation]="true"
-        [animationDuration]="800"
-        ></circle-progress>
-    </div>
 </div>
