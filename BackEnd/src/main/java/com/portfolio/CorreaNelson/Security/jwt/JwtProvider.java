@@ -1,6 +1,5 @@
 package com.portfolio.CorreaNelson.Security.jwt;
 
-
 import com.portfolio.CorreaNelson.Security.Entity.UsuarioPrincipal;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
