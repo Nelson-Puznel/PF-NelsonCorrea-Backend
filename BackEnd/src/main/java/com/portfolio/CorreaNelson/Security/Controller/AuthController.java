@@ -31,13 +31,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 
-//NO ENCUENTRO EL ERROR
 //@CrossOrigin(origins = "http://localhost:4200")
-//@CrossOrigin(origins = "https://frontend-argprograma-cn.web.app")
+//CrossOrigin(origins = "https://frontend-argprograma-cn.web.app")
 @CrossOrigin(origins = {"https://frontend-argprograma-cn.web.app","http://localhost:4200"})
 
+
 public class AuthController {
-    @Autowired
+    @Autowired 
     PasswordEncoder passwordEncoder;
     @Autowired
     AuthenticationManager authenticationManager;
@@ -70,7 +70,7 @@ public class AuthController {
         usuario.setRoles(roles);
         usuarioService.save(usuario);
         
-        return new ResponseEntity(new Mensaje("Usuario creado con exito"),HttpStatus.CREATED);
+        return new ResponseEntity(new Mensaje("Usuario guardado"),HttpStatus.CREATED);
     }
     
     @PostMapping("/login")
@@ -91,5 +91,4 @@ public class AuthController {
         
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }
-    
 }
