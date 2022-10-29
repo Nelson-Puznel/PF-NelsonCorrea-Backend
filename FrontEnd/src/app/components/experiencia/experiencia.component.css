@@ -1,10 +1,12 @@
 .row{
     padding: 20px;
+    background-color: #4c94a3;
 }
-div{
-    background: #ffffff;
 
-}
 h1, h3{
     display: inline;
+}
+
+*{
+    overflow: hidden;
 }

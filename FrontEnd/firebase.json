@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/pf-nelson-correa",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

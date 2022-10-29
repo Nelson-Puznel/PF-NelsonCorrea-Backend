@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/personas")
-
 //@CrossOrigin(origins = "http://localhost:4200")
 //CrossOrigin(origins = "https://frontend-argprograma-cn.web.app")
 @CrossOrigin(origins = {"https://frontend-argprograma-cn.web.app","http://localhost:4200"})
 
+@RestController
+@RequestMapping("/personas")
+
 public class PersonaController {
- 
+    
  @Autowired
     ImpPersonaService personaService;
     
@@ -91,7 +91,7 @@ public class PersonaController {
         
         personaService.save(persona);
         
-        return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
     }  
            
 }

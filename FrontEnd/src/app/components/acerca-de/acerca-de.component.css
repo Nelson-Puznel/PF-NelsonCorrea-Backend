@@ -1,15 +1,24 @@
 .row{
     padding: 50px;
+    background-color: #4c94a3;
 }
+
+*{
+    overflow: hidden;
+}
+
 div{
-    background-color: #ffffff;
     text-align: center;
+}
+
+.parte1, .parte2{
+    display: inline-block;
+    text-align: justify;
 }
 
 /*Estilo de la foto de perfil*/
 @media (min-width: 576px){
     #fotodeperfil {
-        position: relative;
         width: 30%;
         border-radius: 100%;
         box-shadow: 1px 1px 1px grey;
@@ -20,7 +29,6 @@ div{
     
 @media (max-width: 577px){
     #fotodeperfil {
-        position: relative;
         width: 30%;
         border-radius: 100%;
         box-shadow: 1px 1px 1px grey;

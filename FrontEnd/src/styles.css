@@ -3,18 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
     overflow-x: hidden;
+    background-color: #4c94a3;
 }
-h1{
+h2{
     display: inline;
     font-size: 20px;
     /* color: #000000; */
     font-style: italic;
 }
-h2{
+h3{
     display: inline;
     font-size: x-small;
     /* color: #868686 */
